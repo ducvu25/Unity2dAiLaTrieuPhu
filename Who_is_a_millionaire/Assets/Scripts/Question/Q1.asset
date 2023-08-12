@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08c060d150f3f5a459fc69948556994c, type: 3}
-  m_Name: New Question
+  m_Name: Q1
   m_EditorClassIdentifier: 
-  question: Ai la nguoi dz nhat
-  answer:
-  - Duc
-  - An
-  - Duong
-  - Ken
-  key: 0
+  question: How to initialize an integer variable with the value 10 in C++
+  answers:
+  - a = 10;
+  - a = 10f
+  - int a = 10f
+  - int a = 10;
+  key: 3

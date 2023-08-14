@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c060d150f3f5a459fc69948556994c, type: 3}
+  m_Name: Q2
+  m_EditorClassIdentifier: 
+  question: how to initialize an array of 10 integer elements in C++
+  answers:
+  - array = new int[10];
+  - array[10];
+  - int array[10];
+  - int array = new int[10];
+  key: 2

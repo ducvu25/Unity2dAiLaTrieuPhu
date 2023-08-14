@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 223489895}
   - component: {fileID: 223489894}
   - component: {fileID: 223489893}
+  - component: {fileID: 223489896}
   m_Layer: 5
   m_Name: Create a question
   m_TagString: Untagged
@@ -500,7 +501,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -525,6 +526,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1888277251}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 212507213}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: SetScene
@@ -575,6 +588,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223489891}
   m_CullTransparentMesh: 1
+--- !u!95 &223489896
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223489891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35ba2ab2cf9f1be418d5ab92ec7a789b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &326480324
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +848,7 @@ GameObject:
   - component: {fileID: 538802027}
   - component: {fileID: 538802026}
   - component: {fileID: 538802025}
+  - component: {fileID: 538802028}
   m_Layer: 5
   m_Name: Play game
   m_TagString: Untagged
@@ -861,7 +896,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -886,6 +921,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1888277251}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 212507213}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: SetScene
@@ -936,6 +983,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538802023}
   m_CullTransparentMesh: 1
+--- !u!95 &538802028
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538802023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35ba2ab2cf9f1be418d5ab92ec7a789b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &672585212
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +1016,7 @@ GameObject:
   - component: {fileID: 672585216}
   - component: {fileID: 672585215}
   - component: {fileID: 672585214}
+  - component: {fileID: 672585217}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -995,7 +1064,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1020,6 +1089,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1888277251}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 212507213}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: SetScene
@@ -1070,6 +1151,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672585212}
   m_CullTransparentMesh: 1
+--- !u!95 &672585217
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672585212}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35ba2ab2cf9f1be418d5ab92ec7a789b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1007051530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1509,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389640715}
   m_CullTransparentMesh: 1
+--- !u!114 &1888277251 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4523918223432734168, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+  m_PrefabInstance: {fileID: 4337602440229296518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c67094b9eb35554a9d651c9864cba50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023020627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1532,7 @@ GameObject:
   - component: {fileID: 2023020631}
   - component: {fileID: 2023020630}
   - component: {fileID: 2023020629}
+  - component: {fileID: 2023020632}
   m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
@@ -1466,7 +1580,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1491,6 +1605,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1888277251}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 212507213}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: SetScene
@@ -1541,6 +1667,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023020627}
   m_CullTransparentMesh: 1
+--- !u!95 &2023020632
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023020627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35ba2ab2cf9f1be418d5ab92ec7a789b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2054377881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,3 +1901,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123726502}
   m_CullTransparentMesh: 1
+--- !u!1001 &4337602440229296518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4848723748761382274, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8343122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3875757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.27704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006508319547003212, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f06d05ffb37b8194682a0df52c6f9248, type: 3}

@@ -35,7 +35,7 @@ public class CreateAQuestion : MonoBehaviour
         }
         else
         {
-            string filePath = "Assets/Scripts/Question/" + name.text + ".asset"; // Đường dẫn tệp tin bạn muốn kiểm tra
+            string filePath = "Assets/Resources/Questions/" + name.text + ".asset"; // Đường dẫn tệp tin bạn muốn kiểm tra
 
             if (File.Exists(filePath))
             {
@@ -47,7 +47,7 @@ public class CreateAQuestion : MonoBehaviour
                 QuestionSO questionSO = ScriptableObject.CreateInstance<QuestionSO>();
                 questionSO.Set(question.text, strings, key);
                 //questionSO.name = name.text;
-                string savePath = "Assets/Scripts/Question/" + name.text + ".asset";
+                string savePath = filePath;
                 UnityEditor.AssetDatabase.CreateAsset(questionSO, savePath);
                 UnityEditor.AssetDatabase.SaveAssets();
 

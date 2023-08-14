@@ -14,9 +14,15 @@ enum SceneIndex
 }
 public class LoadScene : MonoBehaviour
 {
+    int index = 0;
     public void SetScene(int index)
     {
-        if(index != (int)SceneIndex.quit)
+        this.index = index;
+        Invoke("Load", 0.5f);
+    }
+    void Load()
+    {
+        if (index != (int)SceneIndex.quit)
             SceneManager.LoadScene(index);
         else
             Application.Quit();

@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 enum SceneIndex
 {
-    loading,
     menu,
+    loading,
+    menu2,
     play,
+    superMentalMath,
     createAQuestion,
     setting,
     quit
@@ -23,7 +25,12 @@ public class LoadScene : MonoBehaviour
     void Load()
     {
         if (index != (int)SceneIndex.quit)
-            SceneManager.LoadScene(index);
+        {
+            if(index == (int)SceneIndex.menu)
+                SceneManager.LoadScene((int)SceneIndex.loading);
+            else
+                SceneManager.LoadScene(index);
+        }
         else
             Application.Quit();
     }

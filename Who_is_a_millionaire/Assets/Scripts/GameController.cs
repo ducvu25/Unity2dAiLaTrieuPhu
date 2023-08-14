@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+
 public class GameController : MonoBehaviour
 {
     [Header("Question")]
@@ -32,10 +34,13 @@ public class GameController : MonoBehaviour
 
     Quiz quiz;
     QuestionSO question;
+    AudioController audioController;
+    bool choose;
     // Start is called before the first frame update
     void Start()
     {
         quiz = GetComponent<Quiz>();
+        audioController = GameObject.FindWithTag("AudioController").GetComponent<AudioController>();
         quiz.Play();
         score = 0;
         progress.value = 0;
@@ -48,16 +53,22 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (end.activeSelf)
+        if (end.activeSelf || choose)
             return;
-        if (m_time >= 0)
+        if (m_time >= 0 )
         {
             m_time -= Time.deltaTime;
             goTime.GetComponent<Image>().fillAmount = m_time / time;
+            if(m_time < 3)
+            {
+                audioController.PlaySound((int)EffectAudio.time);
+            }
         }
         else
         {
-            TimeOut();
+            audioController.Play((int)EffectAudio.X);
+            Invoke("TimeOut", 0.3f);
+            //TimeOut();
         }
     }
     void NewQuestion()
@@ -69,6 +80,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            choose = false;
             progress.value++;
             question = quiz.NewQuestion();
             m_time = time;
@@ -100,30 +112,52 @@ public class GameController : MonoBehaviour
         answers[question.GetKey()].GetComponent<Button>().image.color = correctAnswerColor;
         answers[question.GetKey()].transform.GetChild(1).GetComponent<Image>().color = correctAnswerColor;
         SetButtonState(false);
+        Invoke("NewQuestion", 0.5f);
     }
     public void ChooseAnswer(int index)
     {
+        choose = true;
+        PlayerPrefs.SetInt("ChooseIndex", index);
+        Invoke("ChooseAnswer", 0.5f);
+    }
+    void ChooseAnswer()
+    {
+        int index = PlayerPrefs.GetInt("ChooseIndex", 0);
         answers[question.GetKey()].GetComponent<Button>().image.color = correctAnswerColor;
         answers[question.GetKey()].transform.GetChild(1).GetComponent<Image>().color = correctAnswerColor;
         if (index != question.GetKey())
         {
+            audioController.Play((int)EffectAudio.X);
             answers[index].GetComponent<Button>().image.color = defaultAnswerColor;
             answers[index].transform.GetChild(1).GetComponent<Image>().color = defaultAnswerColor;
+            end.SetActive(true);
+            txtScore2.text = "Score: " + score.ToString();
         }
         else
         {
+            //Debug.Log();
+            audioController.Play((int)EffectAudio.O);
             score++;
             txtScore.text = "Score: " + score.ToString();
         }
         SetButtonState(false);
-        Invoke("NewQuestion", 0.5f);
+        Invoke("NewQuestion", 1f);
     }
     public void PlayAgain()
+    {
+        Invoke("PlayAgain2", 0.5f);
+        
+    }
+    void PlayAgain2()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Quit()
     {
-        SceneManager.LoadScene((int)SceneIndex.menu);
+        Invoke("Quit2", 0.5f);
+    }
+    void Quit2()
+    {
+        SceneManager.LoadScene((int)SceneIndex.loading);
     }
 }

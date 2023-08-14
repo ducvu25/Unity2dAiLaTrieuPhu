@@ -45,13 +45,13 @@ public class LoadingController : MonoBehaviour
         {
             if (sliders[0].value == sliders[0].maxValue)
             {
-                SceneManager.LoadScene(PlayerPrefs.GetInt("nextScene", (int)SceneIndex.menu));
+                SceneManager.LoadScene((int)SceneIndex.menu);
+                return;
             }
             load.transform.GetChild((int)(sliders[0].maxValue - sliders[0].value) - 1).gameObject.GetComponent<Image>().color = color;
             time_delay = Random.Range(0.3f, 0.7f);
             sliders[0].value++;
             sliders[1].value++;
-
         }
     }
 }

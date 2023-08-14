@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+#if UNITY_EDITOR
 public class CreateAQuestion : MonoBehaviour
 {
     [SerializeField] TMP_InputField question;
@@ -61,3 +65,4 @@ public class CreateAQuestion : MonoBehaviour
         key = value;
     }
 }
+#endif

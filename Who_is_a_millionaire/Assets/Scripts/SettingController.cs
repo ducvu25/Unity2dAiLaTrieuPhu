@@ -21,7 +21,13 @@ public class SettingController : MonoBehaviour
     }
     public void Out()
     {
+        Invoke("OutScene", 0.5f);
+    }
+    void OutScene()
+    {
+       /* Debug.Log(PlayerPrefs.GetInt("SetLv"));*/
         PlayerPrefs.SetInt("SetLv", (int)lv.value);
+        //Debug.Log(PlayerPrefs.GetInt("SetLv"));
         PlayerPrefs.SetInt("SetTime", (int)time.value);
         SceneManager.LoadScene((int)SceneIndex.menu);
     }

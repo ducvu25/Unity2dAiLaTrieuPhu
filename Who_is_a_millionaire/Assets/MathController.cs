@@ -10,6 +10,7 @@ public class MathController : MonoBehaviour
     [Header("Question")]
     [SerializeField] TextMeshProUGUI txtQuestion;
     [SerializeField] TextMeshProUGUI txtNumber;
+    [SerializeField] TextMeshProUGUI txtResult;
     int result;
 
     [Header("Answer")]
@@ -108,6 +109,8 @@ public class MathController : MonoBehaviour
             else
             {
                 audioController.Play((int)EffectAudio.X);
+                txtResult.text = result.ToString();
+                txtResult.gameObject.SetActive(true);
                 Invoke("EndGame", 0.3f);
             }
         }
